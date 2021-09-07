@@ -15,36 +15,36 @@
 			<div id="hide_on_first_playthrough">
 				<div id="section_dynamics">
 
-					On <i>average</i>,
-					each <icon i></icon>...
+					<i>平均</i>而言，
+					每个 <icon i></icon>...
 					<br><br>
 					
 					<div id="label_transmission">
-						Infects 1 <icon s></icon> per <span id="label_p_transmission">N</span> days
+						在 <span id="label_p_transmission">N</span> 天后感染一个 <icon s></icon>
 						<br>
 						<span id="label_transmission_caveat">
-							(at the start of the epidemic)<br>
+							（在疫情开始的时候）<br>
 						</span>
 						<input class="sim_input" type="range" id="p_transmission" min="1" max="30" step="1" value="4">
 					</div>
 
 					<div id="label_c_exposed">
 						<input class="sim_checkbox" type="checkbox" id="c_exposed">
-						Takes <span id="label_p_exposed">N</span> days to go from <icon e></icon> to <icon i></icon>
+						<icon e></icon> 经过 <span id="label_p_exposed">N</span> 天后变成 <icon i></icon>
 						<br>
 						<input class="sim_input" type="range" id="p_exposed" min="1" max="30" step="1" value="3">
 					</div>
 					
 					<div id="label_c_recovery">
 						<input class="sim_checkbox" type="checkbox" id="c_recovery">
-						Takes <span id="label_p_recovery">N</span> days to go from <icon i></icon> to <icon r></icon>
+						<icon i></icon> 经过 <span id="label_p_recovery">N</span> 天后变成 <icon r></icon>
 						<br>
 						<input class="sim_input" type="range" id="p_recovery" min="1" max="30" step="1" value="10">
 					</div>
 					
 					<div id="label_c_waning">
 						<input class="sim_checkbox" type="checkbox" id="c_waning">
-						Loses immunity <icon s></icon> in <span id="label_p_waning">N</span> months
+						在 <span id="label_p_waning">N</span> 月后失去免疫力 <icon s></icon>
 						<br>
 						<input class="sim_input" type="range" id="p_waning" min="1" max="60" step="1" value="12">
 					</div>
@@ -55,67 +55,67 @@
 
 				<div id="section_r">
 
-					R<sub>0</sub> is <span id="label_p_r0" toFixed="2"></span>
+					R<sub>0</sub> 的值为 <span id="label_p_r0" toFixed="2"></span>
 					<canvas class="r_canvas" id="canvas_r0"></canvas>
 					<!--input class="sim_input" type="range" id="p_r0" min="0" max="6" step="0.01" disabled-->
 					<br>
 
 					<span id="label_s">
-						% of people who are <i>NOT</i> <icon s></icon>
+						<i>非</i> <icon s></icon> 人群所占百分比
 						<input class="sim_input" type="range" id="p_s" min="0" max="1" step="0.001" value="0" disabled>
 						<div class="herd"></div>
 						<br>
 					</span>
 
 					<span id="int_block_0">
-						Increased Hygiene
+						增强的卫生措施Increased Hygiene
 						<br>
 						<input class="sim_input recordable" type="range" id="p_hygiene" min="0" max="1" step="0.001" value="0">
 						<br>
 					</span>
 					<span id="int_block_1">
-						Physical Distancing
+						人与人之间的间距
 						<br>
 						<input class="sim_input recordable" type="range" id="p_distancing" min="0" max="1" step="0.001" value="0">
 						<br>
 					</span>
 					<span id="int_block_2">
-						Isolating Cases
+						隔离现有病例
 						<br>
 						<input class="sim_input recordable" type="range" id="p_isolate" min="0" max="1" step="0.001" value="0">
 						<br>
-						Quarantining Contacts
+						隔离密切接触者
 						<br>
 						<input class="sim_input recordable" type="range" id="p_quarantine" min="0" max="1" step="0.001" value="0">
 						<br>
 					</span>
 					<span id="int_block_3">
-						Face Masks
+						戴口罩的人数比例
 						<br>
 						<input class="sim_input recordable" type="range" id="p_masks" min="0" max="1" step="0.001" value="0">
 						<br>
 					</span>
 					<span id="int_block_4">
-						Strength of Summer
+						夏天的温度（相对值）
 						<br>
 						<input class="sim_input recordable" type="range" id="p_summer" min="0" max="1" step="0.001" value="0">
 						<br>
 					</span>
 					<span id="int_block_5">
-						Vaccinations
+						接种疫苗的人数比例
 						<br>
 						<input class="sim_input recordable" type="range" id="p_vaccines" min="0" max="1" step="0.001" value="0">
 						<br>
 					</span>
 
 					<span id="label_re">
-						R is now <span id="label_p_re" toFixed="2"></span>
+						目前 R 的值为 <span id="label_p_re" toFixed="2"></span>
 						<canvas class="r_canvas" id="canvas_re"></canvas>
 						<!--<input class="sim_input" type="range" id="p_re" min="0" max="6" step="0.01" disabled>-->
 					</span>
 
 					<span id="hospital_capacity">
-						ICU capacity at <span id="label_p_hospital">N</span>%
+						ICU 病房数是原来的 <span id="label_p_hospital">N</span>%
 						<br>
 						<input class="sim_input recordable" type="range" id="p_hospital" min="100" max="1000" step="1" value="333">
 					</span>
@@ -126,13 +126,13 @@
 
 				<div id="section_meta">
 
-					Simulate <span id="label_p_years" toFixed="1">N</span> years
+					模拟 <span id="label_p_years" toFixed="1">N</span> 年的情况
 					<span id="section_meta_years">
 						<br>
 						<input class="sim_input" type="range" id="p_years" min="0.5" max="10" step="0.5" value="2">
 						<br>
 					</span>
-					in <span id="label_p_speed">N</span> seconds
+					用时 <span id="label_p_speed">N</span> 秒
 					<br>
 					<input class="sim_input" type="range" id="p_speed" min="1" max="60" step="1" value="30">
 
@@ -143,30 +143,29 @@
 				<div class="big_button">
 					<div id="bb_start">
 						<div class='control_icon' start></div>
-						Start
+						开始
 					</div>
 					<div id="bb_pause">
 						<div class='control_icon' pause></div>
-						Pause
+						暂停
 					</div>
 					<div id="bb_continue">
 						<div class='control_icon' continue></div>
-						Continue
+						继续
 					</div>
 					<div id="bb_reset">
 						<div class='control_icon' reset></div>
-						Reset
+						重启
 					</div>
 				</div>
 				<!--div id="sb_stop">
 					Stop
 				</div-->
 				<div id="sb_reset">
-					Reset All
+					重置
 				</div>
 				<div id="sb_replay">
-					Replay Recording
-				</div>
+					模拟预设场景
 			</div>
 
 		</div>
@@ -182,31 +181,31 @@
 			<div id="legend">
 				
 				<span id="label_susceptible" class="lines">
-					<icon s></icon> Susceptible<span id="show_percent_s"></span>
+					<icon s></icon> 易感者<span id="show_percent_s"></span>
 					<br>
 				</span>
 				<span id="label_exposed" class="lines">
-					<icon e></icon> Exposed<span id="show_percent_e"></span>
+					<icon e></icon> 暴露者<span id="show_percent_e"></span>
 					<br>
 				</span>
 				<span id="label_infectious" class="lines">
-					<icon i></icon> Infectious<span id="show_percent_i"></span>
+					<icon i></icon> 感染者<span id="show_percent_i"></span>
 					<br>
 				</span>
 				<span id="label_removed" class="lines">
-					<icon r></icon> Recovered<span id="show_percent_r"></span>
+					<icon r></icon> 康复者<span id="show_percent_r"></span>
 				</span>
 				
 				<br class="lines">
 				
 				<span id="label_herd_immunity">
-				- - - Herd Immunity
+				- - - 群体免疫
 				</span>
 
 				<br class="lines">
 				
 				<span id="label_capacity">
-				––– ICU Capacity
+				––– ICU 病房容量上限
 				</span>
 
 			</div>
@@ -218,21 +217,21 @@
 			</div>
 			<div id="pointer_words">
 				<span id="pointer_params">
-					Try re-running the simulation
-					with different numbers!
+					尝试使用不同的参数
+					进行模拟！
 					<span id="pointer_params_2">
-						<b>(note: you can change the numbers <i>while</i> the sim is running)</b>
+						<b>（在模拟的 <i>过程中</i> 你可以调整任何参数）</b>
 					</span>
 				</span>
 				<span id="pointer_scroll">
-					Once you're done playing around,
-					scroll down to keep reading!
+					如果你玩够了，
+					请继续往下阅读！
 				</span>
 				<span id="pointer_replay">
-					This simulation has a "recorded scenario"!
+					这个模拟有一个“预设场景”！
 					<br>
-					Click "Start" to watch the recording <i>before</i>
-					you change any of the numbers
+					点击“开始”模拟 <i>“预设场景”</i>
+					你可以调整任何参数
 				</span>
 			</div>
 		</div>
@@ -240,18 +239,18 @@
 	</div>
 
 	<span id="month_names">
-		<span>jan</span>
-		<span>feb</span>
-		<span>mar</span>
-		<span>apr</span>
-		<span>may</span>
-		<span>jun</span>
-		<span>jul</span>
-		<span>aug</span>
-		<span>sep</span>
-		<span>oct</span>
-		<span>nov</span>
-		<span>dec</span>
+		<span>一月</span>
+		<span>二月</span>
+		<span>三月</span>
+		<span>四月</span>
+		<span>五月</span>
+		<span>六月</span>
+		<span>七月</span>
+		<span>八月</span>
+		<span>九月</span>
+		<span>十月</span>
+		<span>十一月</span>
+		<span>十二月</span>
 	</span>
 
 </body>
