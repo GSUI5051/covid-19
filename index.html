@@ -109,186 +109,186 @@
 	    </div>
 	</div>
 
-	<p>&quot;The only thing to fear is fear itself&quot; was stupid advice.</p>
+	<p>“唯一需要恐惧的是恐惧本身。”这句话是一个愚蠢的建议。</p>
 
-	<p>Sure, don&#39;t hoard toilet paper – but if policymakers fear fear itself, they&#39;ll downplay real dangers to avoid &quot;mass panic&quot;. Fear&#39;s not the problem, it&#39;s how we <em>channel</em> our fear. Fear gives us energy to deal with dangers now, and prepare for dangers later.</p>
+	<p>你不必去囤积厕纸，不过如果防疫政策的制定者恐惧的是恐惧本身，他们会弱化局势的危险性，以避免大规模恐慌。恐惧本身并不是问题，问题是在恐惧之中，我们需要做什么。恐惧为我们提供直面危险的动力，同时为以后的危险情况做准备。</p>
 
-	<p>Honestly, we (Marcel, epidemiologist + Nicky, art/code) are worried. We bet you are, too! That&#39;s why we&#39;ve channelled our fear into making these <strong>playable simulations</strong>, so that <em>you</em> can channel your fear into understanding:</p>
+	<p>我们（指作者）对此表示非常担忧，我们觉得你也是这样。由于这种恐惧的存在，我们制作了这些<strong>可交互的疫情模拟器</strong>，因此<em>你</em> 能在这种恐惧之中了解到你面对的是什么。</p>
 
 	<ul>
-	<li><strong>The Last Few Months</strong> (epidemiology 101, SEIR model, R &amp; R<sub>0</sub>)</li>
-	<li><strong>The Next Few Months</strong> (lockdowns, contact tracing, masks)</li>
-	<li><strong>The Next Few Years</strong> (loss of immunity? no vaccine?)</li>
+	<li><strong>在这之前的几个月</strong> （流行病学基础、SEIR 模型、R 与 R<sub>0</sub>）</li>
+	<li><strong>接下来的几个月</strong> （封闭式隔离、密接追踪、口罩）</li>
+	<li><strong>接下来的几年</strong> （失去免疫力？没有疫苗？）</li>
 	</ul>
 
-	<p>This guide (published May 1st, 2020. click this footnote!→<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup>) is meant to give you hope <em>and</em> fear. To beat COVID-19 <strong>in a way that also protects our mental &amp; financial health</strong>, we need optimism to create plans, and pessimism to create backup plans. As Gladys Bronwyn Stern once said, <em>“The optimist invents the airplane and the pessimist the parachute.”</em></p>
+	<p>这篇在 2020 年 5 月 1 日的文章（点击此处查看脚注！→<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup>）将给你希望，<em>同时</em>还会给你带来恐惧。 要以<strong>低成本和低附带损伤的方式</strong>战胜新冠疫情，要以乐观的态度制定防疫计划，同时以悲观的态度制定应对危急情况的备用防疫计划。Gladys Bronwyn Stern 曾说过：<em>“乐观者造飞机，悲观者造降落伞。”</em></p>
 
-	<p>So, buckle in: we&#39;re about to experience some turbulence.</p>
+	<p>准备进入深水区，会有颠簸，请系好安全带。</p>
 
 	<div class="section chapter">
 	    <div>
 	        <img src="banners/curve.png" height=480 style="position: absolute;"/>
-	        <div>The Last Few Months</div>
+	        <div>在这之前的几个月</div>
 	    </div>
 	</div>
 
-	<p>Pilots use flight simulators to learn how not to crash planes.</p>
+	<p>飞行员用模拟机进行学习，学着不让飞机坠毁。</p>
 
-	<p><strong>Epidemiologists use epidemic simulators to learn how not to crash humanity.</strong></p>
+	<p><strong>流行病学专家通过疫情模拟器，在疫情中保护人类。</strong></p>
 
-	<p>So, let&#39;s make a very, <em>very</em> simple &quot;epidemic flight simulator&quot;! In this simulation, <icon i></icon> Infectious people can turn <icon s></icon> Susceptible people into more <icon i></icon> Infectious people:</p>
+	<p>首先做一个<em>极为</em>简单粗暴的疫情模拟器！在这个模拟器中， <icon i></icon> 感染者可以将 <icon s></icon> 易感者变为 <icon i></icon> 感染者：</p>
 
 	<p><img src="pics/spread.png" alt=""></p>
 
-	<p>It&#39;s estimated that, <em>at the start</em> of a COVID-19 outbreak, the virus jumps from an <icon i></icon> to an <icon s></icon> every 4 days, <em>on average</em>.<sup id="fnref2"><a href="#fn2" rel="footnote">2</a></sup> (remember, there&#39;s a lot of variation)</p>
+	<p>根据早期的估计，在疫情 <em>刚刚开始</em> 的时候，病毒从一个 <icon i></icon> 传播到一个 <icon s></icon> 的身上<em>平均</em> 需要 4 天。<sup id="fnref2"><a href="#fn2" rel="footnote">2</a></sup> （别忘了，这一数值有各种各样的估计结果）</p>
 
-	<p>If we simulate &quot;double every 4 days&quot; <em>and nothing else</em>, on a population starting with just 0.001% <span class="nowrap"><icon i></icon>,</span> what happens? </p>
+	<p>如果在模拟中，感染人数每 4 天翻一倍，不进行干预的话，如果 0.001% 的人口是 <span class="nowrap"><icon i></icon>，</span> 会发生什么？</p>
 
-	<p><strong>Click &quot;Start&quot; to play the simulation! You can re-play it later with different settings:</strong> (technical caveats: <sup id="fnref3"><a href="#fn3" rel="footnote">3</a></sup>)</p>
+	<p><strong>点击“开始”启动模拟！模拟完成后你可以调整参数，再次进行模拟：</strong> （技术细节：<sup id="fnref3"><a href="#fn3" rel="footnote">3</a></sup>）</p>
 
 	<div class="sim">
 	        <iframe src="sim?stage=epi-1" width="800" height="540"></iframe>
 	</div>
 
-	<p>This is the <strong>exponential growth curve.</strong> Starts small, then explodes. &quot;Oh it&#39;s just a flu&quot; to &quot;Oh right, flus don&#39;t create <em>mass graves in rich cities</em>&quot;. </p>
+	<p>这就是<strong>指数增长曲线。</strong>一开始很小，然后是爆炸性增长。从“这只是流感”到“大城市不会在流感中出现万人坑” 。</p>
 
 	<p><img src="pics/exponential.png" alt=""></p>
 
-	<p>But, this simulation is wrong. Exponential growth, thankfully, can&#39;t go on forever. One thing that stops a virus from spreading is if others <em>already</em> have the virus:</p>
+	<p>然而，这个模拟是错误的。谢天谢地，不存在永远的指数增长。如果别人都 <em>已经</em> 感染了病毒，病毒不会传播：</p>
 
 	<p><img src="pics/susceptibles.png" alt=""></p>
 
-	<p>The more <span class="nowrap"><icon i></icon>s</span> there are, the faster <span class="nowrap"><icon s></icon>s</span> become <span class="nowrap"><icon i></icon>s,</span> <strong>but the fewer <span class="nowrap"><icon s></icon>s</span> there are, the <em>slower</em> <span class="nowrap"><icon s></icon>s</span> become <span class="nowrap"><icon i></icon>s.</span></strong></p>
+	<p>越多的 <icon i></icon>，<span class="nowrap"><icon s></icon></span> 变成 <span class="nowrap"><icon i></icon> 的速度越快，</span> <strong>然而越少的 <span class="nowrap"><icon s></icon>，</span><span class="nowrap"><icon s></icon></span> 变成 <span class="nowrap"><icon i></icon> 的速度<em>越慢</em>。</span></strong></p>
 
-	<p>How&#39;s this change the growth of an epidemic? Let&#39;s find out:</p>
+	<p>考虑到这种情况，疫情的发展会发生什么变化？一起来看看吧：</p>
 
 	<div class="sim">
 	        <iframe src="sim?stage=epi-2" width="800" height="540"></iframe>
 	</div>
 
-	<p>This is the &quot;S-shaped&quot; <strong>logistic growth curve.</strong> Starts small, explodes, then slows down again.</p>
+	<p>这是 S 形的<strong>逻辑斯蒂 (logistic) 增长曲线。</strong>一开始很小，然后爆炸性增长，最后增速变慢。</p>
 
-	<p>But, this simulation is <em>still</em> wrong. We&#39;re missing the fact that <icon i></icon> Infectious people eventually stop being infectious, either by 1) recovering, 2) &quot;recovering&quot; with lung damage, or 3) dying.</p>
+	<p>然而，这个模拟 <em>还是</em> 错的。我们忽略了这个事实： <icon i></icon> 感染者最终会由于这些原因失去传染性：1. 完全康复，身体不受任何损伤；2. 肺部受损，随后恢复健康；3. 病死。</p>
 
-	<p>For simplicity&#39;s sake, let&#39;s pretend that all <icon i></icon> Infectious people become <icon r></icon> Recovered. (Just remember that in reality, some are dead.) <span class="nowrap"><icon r></icon>s</span> can&#39;t be infected again, and let&#39;s pretend – <em>for now!</em> – that they stay immune for life.</p>
+	<p>为了简化，假设所有的 <icon i></icon> 感染者在疫情中得以 <icon r></icon> 恢复。（别忘了，有的人在疫情中病死了。） <span class="nowrap"><icon r></icon></span> 不能再被感染，<em>现在</em> 假设康复者获得了能终生保持的免疫力。</p>
 
-	<p>With COVID-19, it&#39;s estimated you&#39;re <icon i></icon> Infectious for 10 days, <em>on average</em>.<sup id="fnref4"><a href="#fn4" rel="footnote">4</a></sup> That means some folks will recover before 10 days, some after. <strong>Here&#39;s what that looks like, with a simulation <em>starting</em> with 100% <span class="nowrap"><icon i></icon>:</span></strong></p>
+	<p>在这次新冠疫情中，<em>平均而言</em> 如果你在这 10 天内具有 <icon i></icon> 传染性。<sup id="fnref4"><a href="#fn4" rel="footnote">4</a></sup> 也就是说有的人在 10 天之内恢复，有的人需要多余 10 天的时间恢复。<strong>接下来的模拟中，假设所有的人 <em>在一开始</em> 都是感染者 <span class="nowrap"><icon i></icon>:</span></strong></p>
 
 	<div class="sim">
 	        <iframe src="sim?stage=epi-3" width="800" height="540"></iframe>
 	</div>
 
-	<p>This is the opposite of exponential growth, the <strong>exponential decay curve.</strong></p>
+	<p>这是指数增长的反面：<strong>指数衰减曲线。</strong></p>
 
-	<p>Now, what happens if you simulate S-shaped logistic growth <em>with</em> recovery?</p>
+	<p>现在，如果将 S 形的逻辑斯蒂增长曲线，<em>和</em> 恢复者的曲线这两者结合，进行模拟，会发生什么？</p>
 
 	<p><img src="pics/graphs_q.png" alt=""></p>
 
-	<p>Let&#39;s find out.</p>
+	<p>一起来看看吧。</p>
 
-	<p><b style='color:#ff4040'>Red curve</b> is <em>current</em> cases <span class="nowrap"><icon i></icon>,</span><br>
-	<b style='color:#999999'>Gray curve</b> is <em>total</em> cases (current + recovered <span class="nowrap"><icon r></icon>),</span>
-	starts at just 0.001% <span class="nowrap"><icon i></icon>:</span></p>
+	<p><b style='color:#ff4040'>红色曲线</b> 是 <em>目前的</em> 病例数 <span class="nowrap"><icon i></icon>,</span><br>
+	<b style='color:#999999'>灰色曲线</b> 是 <em>所有的</em> 病例数（目前病例数再加上恢复 <icon r></icon> 的病例数），
+	假设有 0.001% 的人口是感染者 <span class="nowrap"><icon i></icon> ：</span></p>
 
 	<div class="sim">
 	        <iframe src="sim?stage=epi-4" width="800" height="540"></iframe>
 	</div>
 
-	<p>And <em>that&#39;s</em> where that famous curve comes from! It&#39;s not a bell curve, it&#39;s not even a &quot;log-normal&quot; curve. It has no name. But you&#39;ve seen it a zillion times, and beseeched to flatten.</p>
+	<p>那条著名的曲线就来自这里！既不是钟形曲线，也不是对数正态分布曲线（译注：假设随机变量 X 的对数 log(X) 服从正态分布，那么随机变量 X 服从对数正态分布）。这条曲线连个正式的名字都没有，然而你多次看到这条曲线。这就是需要“压平”的曲线。</p>
 
-	<p>This is the <strong>SIR Model</strong>,<sup id="fnref5"><a href="#fn5" rel="footnote">5</a></sup><br>
-	(<icon s></icon><strong>S</strong>usceptible <icon i></icon><strong>I</strong>nfectious <icon r></icon><strong>R</strong>ecovered)<br>
-	the <em>second</em>-most important idea in Epidemiology 101:</p>
+	<p>这是 <strong>SIR 模型</strong>,<sup id="fnref5"><a href="#fn5" rel="footnote">5</a></sup><br>
+	<icon s></icon><strong> S </strong>（易感者）<icon i></icon><strong> I </strong>（感染者）<icon r></icon><strong> R </strong>（恢复者）<br>
+	这是在流行病学的基础理论中 <em>第二</em> 重要的内容：</p>
 
 	<p><img src="pics/sir.png" alt=""></p>
 
-	<p><strong>NOTE: The simulations that inform policy are way, <em>way</em> more sophisticated than this!</strong> But the SIR Model can still explain the same general findings, even if missing the nuances.</p>
+	<p><strong>注意：从这些模拟中可以看出，实际的防疫政策 <em>远远</em> 比这些模型还要复杂得多！</strong> 尽管 SIR 模型忽略了其他的影响因素，但它仍然能解释一些被广泛承认的发现。</p>
 
-	<p>Actually, let&#39;s add one more nuance: before an <icon s></icon> becomes an <span class="nowrap"><icon i></icon>,</span> they first become <icon e></icon> Exposed. This is when they have the virus but can&#39;t pass it on yet – infect<em>ed</em> but not yet infect<em>ious</em>.</p>
+	<p>根据实际情况，加上一个影响因素：在一个 <icon s></icon> 变成 <span class="nowrap"><icon i></icon> 之前，</span> 首先会变成 <icon e></icon> 暴露者。暴露者已经 <em>感染了</em> 病毒，但是他们不具有 <em>传染性。</em></p>
 
 	<p><img src="pics/seir.png" alt=""></p>
 
-	<p>(This variant is called the <strong>SEIR Model</strong><sup id="fnref6"><a href="#fn6" rel="footnote">6</a></sup>, where the &quot;E&quot; stands for <icon e></icon> &quot;Exposed&quot;. Note this <em>isn&#39;t</em> the everyday meaning of &quot;exposed&quot;, when you may or may not have the virus. In this technical definition, &quot;Exposed&quot; means you definitely have it. Science terminology is bad.)</p>
+	<p>（这一变种被称为 <strong>SEIR 模型</strong><sup id="fnref6"><a href="#fn6" rel="footnote">6</a></sup>，E 表示 <icon e></icon> 暴露者。不论你有没有被感染，这并不是常见意义上的“暴露”。技术上而言，“暴露”就表示你被感染了，科技术语实在是太糟了。）</p>
 
-	<p>For COVID-19, it&#39;s estimated that you&#39;re <icon e></icon> infected-but-not-yet-infectious for 3 days, <em>on average</em>.<sup id="fnref7"><a href="#fn7" rel="footnote">7</a></sup> What happens if we add that to the simulation?</p>
+	<p>据估计，新冠病毒具有 <em>平均</em>  3 天的 <icon e></icon> 潜伏期。<sup id="fnref7"><a href="#fn7" rel="footnote">7</a></sup> 考虑到这个因素，在模拟中会发生什么？</p>
 
-	<p><b style='color:#ff4040'>Red <b style='color:#FF9393'>+ Pink</b> curve</b> is <em>current</em> cases (infectious <icon i></icon> + exposed <span class="nowrap"><icon e></icon>),</span><br>
-	<b style='color:#888'>Gray curve</b> is <em>total</em> cases (current + recovered <span class="nowrap"><icon r></icon>):</span></p>
+	<p><b style='color:#ff4040'>红色<b style='color:#FF9393'>加粉色</b>曲线</b> 是 <em>目前的</em> 病例数（感染者 <icon i></icon> 与暴露者 <icon e></icon> 的数量之和）,<br>
+	<b style='color:#888'>灰色曲线</b> 是 <em>所有的</em> 病例数（目前病例数再加上恢复者 <icon r></icon> 的数量）：</p>
 
 	<div class="sim">
 	        <iframe src="sim?stage=epi-5" width="800" height="540"></iframe>
 	</div>
 
-	<p>Not much changes! How long you stay <icon e></icon> Exposed changes the ratio of <span class="nowrap"><icon e></icon>-to-<icon i></icon>,</span> and <em>when</em> current cases peak... but the <em>height</em> of that peak, and total cases in the end, stays the same.</p>
+	<p>好像没多大变化呢！<icon e></icon> 潜伏期的时间长度，决定了 <icon e></icon> 和 <icon i></icon> 之间的比例，还有目前病例数 <em>达到峰值</em>  的时间，最终的总病例数保持不变。</p>
 
-	<p>Why&#39;s that? Because of the <em>first</em>-most important idea in Epidemiology 101:</p>
+	<p>为什么呢？这就是流行病学的基础理论中 <em>最重要</em> 的内容：</p>
 
 	<p><img src="pics/r.png" alt=""></p>
 
-	<p>Short for &quot;Reproduction number&quot;. It&#39;s the <em>average</em> number of people an <icon i></icon> infects <em>before</em> they recover (or die).</p>
+	<p>它是“传染数（reproduction number）”的缩写。它是一个 <icon i></icon> 感染者在恢复（或死亡） <em>之前</em> 能感染的 <em>平均</em> 人数。</p>
 
 	<p><img src="pics/r2.png" alt=""></p>
 
-	<p><strong>R</strong> changes over the course of an outbreak, as we get more immunity &amp; interventions.</p>
+	<p>在疫情中，<strong>R</strong> 会发生变化，同时我们会制定更多的防疫措施，获得更强的免疫力。</p>
 
-	<p><strong>R<sub>0</sub></strong> (pronounced R-nought) is what R is <em>at the start of an outbreak, before immunity or interventions</em>. R<sub>0</sub> more closely reflects the power of the virus itself, but it still changes from place to place. For example, R<sub>0</sub> is higher in dense cities than sparse rural areas.</p>
+	<p>基本传染数 <strong>R<sub>0</sub></strong> （读作 R-nought, “阿诺特”，当然读成 R-zero 或者“阿零”也行）是疫情 <em>开始</em> 时 R 的值，那时我们尚未制定防疫措施，也不具有免疫力。R<sub>0</sub> 更多表示的是病毒的传播能力，这个值还与地区有关。举个例子，在人口密度较高的城市地区，R<sub>0</sub> 的值大于人口密度较低的乡村地区。</p>
 
-	<p>(Most news articles – and even some research papers! – confuse R and R<sub>0</sub>. Again, science terminology is bad)</p>
+	<p>（很多新发表的文章和论文把 R 和 R<sub>0</sub> 混淆。再说一次，科技术语实在是太糟了。）</p>
 
-	<p>The R<sub>0</sub> for &quot;the&quot; seasonal flu is around 1.28<sup id="fnref8"><a href="#fn8" rel="footnote">8</a></sup>. This means, at the <em>start</em> of a flu outbreak, each <icon i></icon> infects 1.28 others <em>on average.</em> (If it sounds weird that this isn&#39;t a whole number, remember that the &quot;average&quot; mom has 2.4 children. This doesn&#39;t mean there&#39;s half-children running about.)</p>
+	<p>季节性流感的 R<sub>0</sub> 大约为 1.28<sup id="fnref8"><a href="#fn8" rel="footnote">8</a></sup>. 这表示，在流感季节的 <em>开端</em> ，每个 <icon i></icon> 感染者 <em>平均</em> 感染 1.28 个人。（一个非整数的值在这里看起来很奇怪，但是平均一个妈妈有 2.4 个孩子。这并不表示有“半个人”在路上游荡）</p>
 
-	<p>The R<sub>0</sub> for COVID-19 is estimated to be around 2.2,<sup id="fnref9"><a href="#fn9" rel="footnote">9</a></sup> though one <em>not-yet-finalized</em> study estimates it was 5.7(!) in Wuhan.<sup id="fnref10"><a href="#fn10" rel="footnote">10</a></sup></p>
+	<p>据估计，新冠病毒的 R<sub>0</sub> 大约为 2.2, <sup id="fnref9"><a href="#fn9" rel="footnote">9</a></sup> 一个 <em>尚未完成</em> 的研究表明，新冠病毒在武汉的 R<sub>0</sub> 是 5.7<sup id="fnref10"><a href="#fn10" rel="footnote">10</a></sup></p>
 
-	<p>In our simulations – <em>at the start &amp; on average</em> – an <icon i></icon> infects someone every 4 days, over 10 days. &quot;4 days&quot; goes into &quot;10 days&quot; two-and-a-half times. This means – <em>at the start &amp; on average</em> – each <icon i></icon> infects 2.5 others. Therefore, R<sub>0</sub> = 2.5. (caveats:<sup id="fnref11"><a href="#fn11" rel="footnote">11</a></sup>)</p>
+	<p>在我们的模拟中， <em>疫情开始时</em> 每个 <icon i></icon> 感染者在这 10 天里 <em>平均</em> 每 4 天感染一个人，10 天是 4 天的 2.5 倍。这表示，在 <em>疫情开始时</em> 每个 <icon i></icon> 感染者 <em>平均</em> 感染 2.5 个人。所以 R<sub>0</sub> = 2.5. （技术细节：<sup id="fnref11"><a href="#fn11" rel="footnote">11</a></sup>）</p>
 
-	<p><strong>Play with this R<sub>0</sub> calculator, to see how R<sub>0</sub> depends on recovery time &amp; new-infection time:</strong></p>
+	<p><strong>尝试一下这个 R<sub>0</sub> 计算器，看看 R<sub>0</sub> 如何随着恢复时间和感染时间的变化而变化：</strong></p>
 
 	<div class="sim">
 	        <iframe src="sim?stage=epi-6a&format=calc" width="285" height="255"></iframe>
 	</div>
 
-	<p>But remember, the fewer <span class="nowrap"><icon s></icon>s</span> there are, the <em>slower</em> <span class="nowrap"><icon s></icon>s</span> become <span class="nowrap"><icon i></icon>s.</span> The <em>current</em> reproduction number (R) depends not just on the <em>basic</em> reproduction number (R<sub>0</sub>), but <em>also</em> on how many people are no longer <icon s></icon> Susceptible. (For example, by recovering &amp; getting natural immunity.)</p>
+	<p>请记住， <span class="nowrap"><icon s></icon> 感染者</span>的数量越少，<span class="nowrap"><icon s></icon> 易感者</span>变成 <span class="nowrap"><icon i></icon> 感染者</span>的速度越慢。<em>目前</em> 的传染数（R）不仅取决于基本传染数（R<sub>0</sub>）, <em>还</em> 取决于 <icon s></icon> 易感人群的数量。（例如：从疫情中恢复，并自然获得免疫力。）</p>
 
 	<div class="sim">
 	        <iframe src="sim?stage=epi-6b&format=calc" width="285" height="390"></iframe>
 	</div>
 
-	<p>When enough people have immunity, R &lt; 1, and the virus is contained! This is called <strong>herd immunity</strong>. For flus, herd immunity is achieved <em>with a vaccine</em>. Trying to achieve &quot;natural herd immunity&quot; by letting folks get infected is a <em>terrible</em> idea. (But not for the reason you may think! We&#39;ll explain later.)</p>
+	<p>当有足够的人具有免疫力之后，R &lt; 1, 疫情就已经得到了控制！这被称为<strong>群体免疫</strong>。举个例子，<em>通过疫苗</em> 能获得针对流感的群体免疫。让人们通过感染病毒，达成群体免疫的想法，实在是太糟糕了。（这并不像你想的那样，接下来我们将会解释这是为什么。）</p>
 
-	<p>Now, let&#39;s play the SEIR Model again, but showing R<sub>0</sub>, R over time, and the herd immunity threshold:</p>
+	<p>再进行一次 SEIR 模型的模拟，但这次展示了 R<sub>0</sub> 和 R 的值随着时间的变化，以及达成群体免疫的阈值：</p>
 
 	<div class="sim">
 	        <iframe src="sim?stage=epi-7" width="800" height="540"></iframe>
 	</div>
 
-	<p><strong>NOTE: Total cases <em>does not stop</em> at herd immunity, but overshoots it!</strong> And it crosses the threshold <em>exactly</em> when current cases peak. (This happens no matter how you change the settings – try it for yourself!)</p>
+	<p><strong>注意：在达成群体免疫之后，总病例数 <em>不会停止增长</em> ，而是会超过这个阈值！</strong> 当目前的病例数达到峰值时，总病例数 <em>恰好</em> 超过这个阈值。（试试看吧！不管你如何调整参数，这一结论始终成立）</p>
 
-	<p>This is because when there are more <span class="nowrap">non-<icon s></icon>s</span> than the herd immunity threshold, you get R &lt; 1. And when R &lt; 1, new cases stop growing: a peak.</p>
+	<p>这是因为，当<span class="nowrap">非 <icon s></icon></span> （非易感人群）的人数大于达成群体免疫的阈值时，R &lt; 1. 当 R &lt; 1 时，不会出现新的病例，总病例数达到峰值。</p>
 
-	<p><strong>If there&#39;s only one lesson you take away from this guide, here it is</strong> – it&#39;s an extremely complex diagram so please take time to fully absorb it:</p>
+	<p><strong>如果这是你从这篇文章中唯一学到的东西，那么这张图就是：</strong>这是一张极为复杂的图片，你需要花点时间来完全消化它：</p>
 
 	<p><img src="pics/r3.png" alt=""></p>
 
-	<p><strong>This means: we do NOT need to catch all transmissions, or even nearly all transmissions, to stop COVID-19!</strong></p>
+	<p><strong>这意味着：我们不需要阻断所有的传播途径，来阻止新冠疫情！</strong></p>
 
-	<p>It&#39;s a paradox. COVID-19 is extremely contagious, yet to contain it, we &quot;only&quot; need to stop more than 60% of infections. 60%?! If that was a school grade, that&#39;s a D-. But if R<sub>0</sub> = 2.5, cutting that by 61% gives us R = 0.975, which is R &lt; 1, virus is contained! (exact formula:<sup id="fnref12"><a href="#fn12" rel="footnote">12</a></sup>)</p>
+	<p>这其实是个悖论。新冠病毒的传染性极强，我们尚未能阻止新冠疫情。要阻止新冠疫情，需要阻断至少 60% 的传播。60%?! 如果这是在学校的等级评定，这将会得到一个D-. 如果 R<sub>0</sub> = 2.5, 阻断 61% 的传播之后能达到 R = 0.975，可以达成 R &lt; 1 的目标，疫情得到了控制！（准确的公式：<sup id="fnref12"><a href="#fn12" rel="footnote">12</a></sup>）</p>
 
 	<p><img src="pics/r4.png" alt=""></p>
 
-	<p>(If you think R<sub>0</sub> or the other numbers in our simulations are too low/high, that&#39;s good you&#39;re challenging our assumptions! There&#39;ll be a &quot;Sandbox Mode&quot; at the end of this guide, where you can plug in your <em>own</em> numbers, and simulate what happens.)</p>
+	<p>（如果你觉得 R<sub>0</sub> 或者其他的数值太高或者太低，很好，你正在挑战我们作出的假设！在这篇文章的最后会有一个“沙盘模式”，你可以在那里输入 <em>你自己</em> 的数值进行模拟，看看会发生什么。）</p>
 
-	<p><em>Every</em> COVID-19 intervention you&#39;ve heard of – handwashing, social/physical distancing, lockdowns, self-isolation, contact tracing &amp; quarantining, face masks, even &quot;herd immunity&quot; – they&#39;re <em>all</em> doing the same thing:</p>
+	<p><em>所有</em> 的防疫措施，包括但不限于：洗手、提高人与人的间距、进行网络社交、封闭式隔离、自我隔离、密接追踪、隔离现有病例、戴口罩、群体免疫，<em>所有</em> 的措施就是为了：</p>
 
-	<p>Getting R &lt; 1.</p>
+	<p>达成 R &lt; 1 的目标。</p>
 
-	<p>So now, let&#39;s use our &quot;epidemic flight simulator&quot; to figure this out: How can we get R &lt; 1 in a way <strong>that also protects our mental health <em>and</em> financial health?</strong></p>
+	<p>接下来，我们将使用“疫情模拟器”，解答这个问题：如何达成 R &lt; 1 的目标？<strong>这需要在保护我们的心理健康的同时，<em>还要</em> 保住我们的钱袋子。</strong></p>
 
-	<p>Brace yourselves for an emergency landing...</p>
+	<p>飞机即将进行紧急迫降，请做好并保持防冲击姿势。</p>
 
 	<div class="section chapter">
 	    <div>
 	        <img src="banners/curve.png" height=480 style="position: absolute;"/>
-	        <div>The Next Few Months</div>
+	        <div>接下来的几个月</div>
 	    </div>
 	</div>
 
@@ -561,7 +561,7 @@
 	<div class="section chapter">
 	    <div>
 	        <img src="banners/curve.png" height=480 style="position: absolute;"/>
-	        <div>The Next Few Years</div>
+	        <div>接下来的几年</div>
 	    </div>
 	</div>
 
@@ -660,7 +660,7 @@
 	<div class="section chapter">
 	    <div>
 	        <img src="banners/curve.png" height=480 style="position: absolute;"/>
-	        <div>The Now</div>
+	        <div>现状</div>
 	    </div>
 	</div>
 
@@ -933,43 +933,42 @@
 
 	<div>
 
-		Help this post get its R > 1: <span class='shareables in_footer' style='position: relative; top: 17px; right: -6px;'></span>
+		让这篇文章达成 R > 1 的目标：<span class='shareables in_footer' style='position: relative; top: 17px; right: -6px;'></span>
 		<br><br>
-		This guide is
+		这篇文章的版权归属为：
 		<br>
 		<img src='sharing/cc0.png' style="margin-right: 10px; margin-top: 10px; width: 120px;"/>
 		<b style='font-size: 100px;position: relative;top: -24px;'>
-			PUBLIC DOMAIN
-		</b>
-		That means you <i>already</i> have permission to re-use &amp; remix
-		any of the art/code/words on this page – on blogs, news sites, classrooms, anywhere!
+			公有领域
+		</b><br>
+		这说明你 <i>已经</i> 有重制这篇文章和在任意地方再次使用这篇文章的权利
+		包括但不限于：本页面的图片/代码/文字内容
 		<a href='https://github.com/ncase/covid-19'>
-			(Swipe our code on Github)
+			（点击查看源码）
 		</a>
 		<br>
 		<b>
-			Just remember to credit
+			引用这篇文章的时候别忘了加上以下信息：
 			<a href='https://scholar.google.com/citations?user=_wHMGkUAAAAJ&hl=en'>Marcel Salathé</a>
-			&
+			, 
 			<a href='https://ncase.me/'>Nicky Case</a>
-			(May 2020)
+			（2020年5月）
 		</b>
 
 
 		<br><br>
 
-		This free, open-source guide was made possible thanks to
-		Nicky's supporters on Patreon.
-		If (seriously, ONLY IF) you have some disposible income in these hard times, you can
-		<a href='https://www.patreon.com/ncase'>throw coins at Nicky!</a>
-		If not, you can share this guide or
-		<a href='https://ncase.me/'>see their other educational art/interactives</a>.
-		(excellent for homeschooling if, say, schools are currently closed
-		due to a pandemic)
+		感谢 Nicky 在 Patreon 上的支持者，
+		这篇免费开源的文章才得以问世。
+		如果你有点闲钱的话，你可以
+		<a href='https://www.patreon.com/ncase'>点击这里给原作者投食！</a><br>
+		白嫖的话，你可以分享本文，然后再
+		<a href='https://ncase.me/'>看看原作者的网站</a>.
+		（如果你是因为疫情在家上网课的话）
 
 		<br><br>
 
-		Here's some of the generous Patrons who made this possible: 💖
+		感谢这些在 Patreon 上的支持者，这篇文章才得以问世。 💖
 
 		<br><br>
 
@@ -979,7 +978,7 @@
 
 		<br><br>
 
-		And <i>huge</i> thank you to these folks for playtesting/proofreading:
+		<i>万分感谢</i> 这些测试者和事实核查者：
 		Alex Kreitzberg,
 		Amit Patel,
 		EmilyKate McDonough,
@@ -998,19 +997,19 @@
 
 		<br><br>
 
-		Any errors remaining are probably Nicky's fault.
+		所有的问题都是 Nicky （和翻译者）的锅。
 
 	</div>
 
 </div>
 
 <div id="footnotes_container">
-	<h2 id='show_feetnotes_button'>(Click to show Feetnotes)</h2>
-	<h2 id='shown_feetnotes'>Feetnotes:</h2-->
+	<h2 id='show_feetnotes_button'>（点击查看脚注）</h2>
+	<h2 id='shown_feetnotes'>脚注：</h2-->
 </div>
 
 <div id="wash">
-	wash your hands! 👏
+	记得要勤洗手！ 👏
 </div>
 
 
