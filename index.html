@@ -117,7 +117,7 @@
 
 	<ul>
 	<li><strong>在这之前的几个月</strong> （流行病学基础、SEIR 模型、R 与 R<sub>0</sub>）</li>
-	<li><strong>接下来的几个月</strong> （封闭式隔离、密接追踪、口罩）</li>
+	<li><strong>接下来的几个月</strong> （封闭式隔离、接触者追踪、口罩）</li>
 	<li><strong>接下来的几年</strong> （失去免疫力？没有疫苗？）</li>
 	</ul>
 
@@ -158,7 +158,7 @@
 
 	<p><img src="pics/susceptibles.png" alt=""></p>
 
-	<p>越多的 <icon i></icon>，<span class="nowrap"><icon s></icon></span> 变成 <span class="nowrap"><icon i></icon> 的速度越快，</span> <strong>然而越少的 <span class="nowrap"><icon s></icon>，</span><span class="nowrap"><icon s></icon></span> 变成 <span class="nowrap"><icon i></icon> 的速度<em>越慢</em>。</span></strong></p>
+	<p>当存在越多的 <icon i></icon> 时，<span class="nowrap"><icon s></icon></span> 变成 <span class="nowrap"><icon i></icon> 的速度越快，</span> <strong>然而当存在越少的 <span class="nowrap"><icon s></icon> 时，</span><span class="nowrap"><icon s></icon></span> 变成 <span class="nowrap"><icon i></icon> 的速度<em>越慢</em>。</span></strong></p>
 
 	<p>考虑到这种情况，疫情的发展会发生什么变化？一起来看看吧：</p>
 
@@ -275,9 +275,9 @@
 
 	<p><img src="pics/r4.png" alt=""></p>
 
-	<p>（如果你觉得 R<sub>0</sub> 或者其他的数值太高或者太低，很好，你正在挑战我们作出的假设！在这篇文章的最后会有一个“沙盘模式”，你可以在那里输入 <em>你自己</em> 的数值进行模拟，看看会发生什么。）</p>
+	<p>（如果你觉得 R<sub>0</sub> 或者其他的数值太高或者太低，很好，你正在挑战我们的假设！在这篇文章的最后会有一个“沙盘模式”，你可以在那里输入 <em>你自己</em> 的数值进行模拟，看看会发生什么。）</p>
 
-	<p><em>所有</em> 的防疫措施，包括但不限于：洗手、提高人与人的间距、进行网络社交、封闭式隔离、自我隔离、密接追踪、隔离现有病例、戴口罩、群体免疫，<em>所有</em> 的措施就是为了：</p>
+	<p><em>所有</em> 的防疫措施，包括但不限于：洗手、提高人与人的间距、进行网络社交、封闭式隔离、自我隔离、接触者追踪、隔离现有病例、戴口罩、群体免疫，<em>所有</em> 的措施就是为了：</p>
 
 	<p>达成 R &lt; 1 的目标。</p>
 
@@ -292,110 +292,110 @@
 	    </div>
 	</div>
 
-	<p>...could have been worse. Here&#39;s a parallel universe we avoided:</p>
+	<p>情况可能会变得更糟。我们需要避免这种只会在平行宇宙中出现的情况发生：</p>
 
-	<h3 id="toc_0">Scenario 0: Do Absolutely Nothing</h3>
+	<h3 id="toc_0">情况 0: 什么都不做</h3>
 
-	<p><em>Roughly</em> 1 in 20 people infected with COVID-19 need to go to an ICU (Intensive Care Unit).<sup id="fnref13"><a href="#fn13" rel="footnote">13</a></sup> In a rich country like the USA, there&#39;s 1 ICU bed per 3400 people.<sup id="fnref14"><a href="#fn14" rel="footnote">14</a></sup> Therefore, the USA can handle 20 out of 3400 people being <em>simultaneously</em> infected – or, 0.6% of the population.</p>
+	<p>在新冠病毒的感染者中，<em>大约有</em> 1/20 的人需要进 ICU （重症监护室）。<sup id="fnref13"><a href="#fn13" rel="footnote">13</a></sup> 在一个像美国那样的发达国家之中，每 3400 人拥有 1 个 ICU 床位。<sup id="fnref14"><a href="#fn14" rel="footnote">14</a></sup> 因此，美国能 <em>同时</em> 处理 20/3400 的感染者，也就是 0.6% 的人口。</p>
 
-	<p>Even if we <em>more than tripled</em> that capacity to 2%, here&#39;s what would&#39;ve happened <em>if we did absolutely nothing:</em></p>
+	<p>即使我们把 ICU 的床位增加 <em>3倍以上，</em> 也就是 2% 的人口，<em>如果什么都不做的话，</em>接下来会发生的是：</p>
 
 	<div class="sim">
 	        <iframe src="sim?stage=int-1&format=lines" width="800" height="540"></iframe>
 	</div>
 
-	<p>Not good.</p>
+	<p>大事不妙。</p>
 
-	<p>That&#39;s what <a href="http://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-9-impact-of-npis-on-covid-19/">the March 16 Imperial College report</a> found: do nothing, and we run out of ICUs, with more than 80% of the population getting infected. 
-	(remember: total cases <em>overshoots</em> herd immunity)</p>
+	<p>这篇<a href="http://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-9-impact-of-npis-on-covid-19/">帝国理工学院在 2020 年 3 月 16 日的报告</a>表明：如果什么都不做的话，ICU 的床位将会用尽，大于 80% 的人口被感染。（正如在前面提到的那样，病例的总数会超过群体免疫的阈值）</p>
 
-	<p>Even if only 0.5% of infected die<sup id="fnref15"><a href="#fn15" rel="footnote">15</a></sup> – a generous assumption when there&#39;s no more ICUs – in a large country like the US, with 300 million people, 0.5% of 80% of 300 million = still 1.2 million dead... <em>IF we did nothing.</em></p>
+	<p>假设当 ICU 的床位数量用尽时，0.5% 的感染者会死去，<sup id="fnref15"><a href="#fn15" rel="footnote">15</a></sup> 这一假设针对像美国一样的国家还算宽松。<em>如果什么都不做的话，</em> 拥有 3 亿人口的美国，3 亿人口中的 80% 之中的 0.5%, 死亡人数那可是 120 万……</em></p>
 
-	<p>(Lots of news &amp; social media reported &quot;80% will be infected&quot; <em>without</em> &quot;IF WE DO NOTHING&quot;. Fear was channelled into clicks, not understanding. <em>Sigh.</em>)</p>
+	<p>（很多的新闻媒体和自媒体只报道了“80% 的感染者”，<em>并没有</em> 强调“如果什么都不做”。此时恐惧化为点击量，而不是针对目前局势的理解。<em>嗨呀。</em>）</p>
 
-	<h3 id="toc_1">Scenario 1: Flatten The Curve / Herd Immunity</h3>
+	<h3 id="toc_1">情况 1：压平曲线或群体免疫</h3>
 
-	<p>The &quot;Flatten The Curve&quot; plan was touted by every public health organization, while the United Kingdom&#39;s original &quot;herd immunity&quot; plan was universally booed. They were <em>the same plan.</em> The UK just communicated theirs poorly.<sup id="fnref16"><a href="#fn16" rel="footnote">16</a></sup></p>
+	<p>每个公共卫生机构都在鼓吹“压平曲线”的理论，然而英国人原始的“群体免疫”计划遭到全方位的抨击。这两个其实是 <em>同样的防疫计划。</em> 英国人只是用了一种糟糕的手段说出他们的计划。<sup id="fnref16"><a href="#fn16" rel="footnote">16</a></sup></p>
 
-	<p>Both plans, though, had a literally fatal flaw.</p>
+	<p>这两种计划都有一个字面意义上的致命缺陷：</p>
 
-	<p>First, let&#39;s look at the two main ways to &quot;flatten the curve&quot;: handwashing &amp; physical distancing.</p>
+	<p>首先，看一下“压平曲线”的两种主要方法：勤洗手，同时增加人与人的间距。</p>
 
-	<p>Increased handwashing cuts flus &amp; colds in high-income countries by ~25%<sup id="fnref17"><a href="#fn17" rel="footnote">17</a></sup>, while the city-wide lockdown in London cut close contacts by ~70%<sup id="fnref18"><a href="#fn18" rel="footnote">18</a></sup>. So, let&#39;s assume handwashing can reduce R by <em>up to</em> 25%, and distancing can reduce R by <em>up to</em> 70%:</p>
+	<p>提高洗手频率能使富有国家中流感和感冒的病例数量降低约 25% <sup id="fnref17"><a href="#fn17" rel="footnote">17</a></sup>, 伦敦的“全境封锁”将人与人的接触频率降低约 70% <sup id="fnref18"><a href="#fn18" rel="footnote">18</a></sup>. 因此，假设洗手能让 R 的值降低 <em>至多</em> 25%, 同时人与人的间距增加，R 的值因此降低 <em>至多</em> 70%:</p>
 
-	<p><strong>Play with this calculator to see how % of <span class="nowrap">non-<icon s></icon>,</span> handwashing, and distancing reduce R:</strong> (this calculator visualizes their <em>relative</em> effects, which is why increasing one <em>looks</em> like it decreases the effect of the others.<sup id="fnref19"><a href="#fn19" rel="footnote">19</a></sup>)</p>
+	<p><strong>尝试一下这个计算器，看一下<span class="nowrap">非 <icon s></icon> </span>（非易感人群）的人数占比、洗手频率的增加（增强的卫生措施） 、和增加人与人的间距是如何影响 R 的值：</strong> （这个计算器只表示 <em>相对程度</em> 的效果，提高一项措施的效果，<em>看起来</em> 就和弱化一项措施的效果一样。<sup id="fnref19"><a href="#fn19" rel="footnote">19</a></sup>)</p>
 
 	<div class="sim">
 	        <iframe src="sim?stage=int-2a&format=calc" width="285" height="260"></iframe>
 	</div>
 
-	<p>Now, let&#39;s simulate what happens to a COVID-19 epidemic if, starting March 2020, we had increased handwashing but only <em>mild</em> physical distancing – so that R is lower, but still above 1:</p>
+	<p>模拟表明，在 2020 年 3 月新冠疫情开始时（译注：全球范围的新冠疫情始于 2020 年 3 月，中国大陆境内新冠疫情的大规模爆发始于 2020 年 1 月），增加洗手频率，同时人与人的间距增加 <em>少许</em> ，R 的值得以降低，但还是大于 1:</p>
 
 	<div class="sim">
 	        <iframe src="sim?stage=int-2&format=lines" width="800" height="540"></iframe>
 	</div>
 
-	<p>Three notes:</p>
+	<p>三条注释：</p>
 
 	<ol>
-	<li><p>This <em>reduces</em> total cases! <strong>Even if you don&#39;t get R &lt; 1, reducing R still saves lives, by reducing the &#39;overshoot&#39; above herd immunity.</strong> Lots of folks think &quot;Flatten The Curve&quot; spreads out cases without reducing the total. This is impossible in <em>any</em> Epidemiology 101 model. But because the news reported &quot;80%+ will be infected&quot; as inevitable, folks thought total cases will be the same no matter what. <em>Sigh.</em></p></li>
-	<li><p>Due to the extra interventions, current cases peak <em>before</em> herd immunity is reached. In fact, in this simulation, total cases only overshoots <em>a tiny bit</em> above herd immunity – the UK&#39;s plan! At that point, R &lt; 1, you can let go of all other interventions, and COVID-19 stays contained! Well, except for one problem...</p></li>
-	<li><p>You still run out of ICUs. For several months. (and remember, we <em>already</em> tripled ICUs for these simulations)</p></li>
+	<li><p>这能 <em>降低</em> 受感染的人数！<strong>即使没达到 R &lt; 1 的目标，降低 R 的值仍然能挽救生命，同时降低受感染的人数（非易感人群的数量）与群体免疫阈值之间的差值。</strong>大众会觉得“压平曲线”的计划只会使病例在时间上更为分散，并不会降低病例总数。这在 <em>任何</em> 一种流行病学的基本模型中是不会出现的。然而某些跑得快的媒体说“出现 80% 的感染者是不可避免的”，大众会认为，无论如何，受感染的人数是不变的。<em>嗨呀。</em></p></li>
+	<li><p>由于采取了这些强化的防疫措施，目前病例数在达成群体免疫 <em>之前</em> 达到峰值。在这个模拟中，受感染的人数实际上 <em>略微</em> 超过达成群体免疫的峰值，而这就是英国人的计划！此时 R &lt; 1, 然后恢复到疫情之前的生活，疫情因此始终得到了控制
+	！然而，还有一个问题……</p></li>
+	<li><p>ICU 床位不足的情况将会持续好几个月。（别忘了，在这些模拟之中，ICU 的床位数 <em>已经是</em> 原来的三倍）</p></li>
 	</ol>
 
-	<p>That was the other finding of the March 16 Imperial College report, which convinced the UK to abandon its original plan. Any attempt at <strong>mitigation</strong> (reduce R, but R &gt; 1) will fail. The only way out is <strong>suppression</strong> (reduce R so that R &lt; 1).</p>
+	<p>这就是皇家理工学院在 2020 年 3 月 16 日的报告中提到的内容，英国人因此放弃了原始的“群体免疫”计划。所有<strong>缓解疫情</strong>（降低 R 的值，但是 R &gt; 1）的计划终将失败。唯一成功的计划是<strong>遏制疫情</strong>（降低 R 的值，直到 R &lt; 1）。</p>
 
 	<p><img src="pics/mitigation_vs_suppression.png" alt=""></p>
 
-	<p>That is, don&#39;t merely &quot;flatten&quot; the curve, <em>crush</em> the curve. For example, with a...</p>
+	<p>这说明，不要“压平”曲线，要 <em>“碾压”</em> 曲线。举个粒子，来一次持续数月的封闭式隔离……</p>
 
-	<h3 id="toc_2">Scenario 2: Months-Long Lockdown</h3>
+	<h3 id="toc_2">情况 2: 持续数月的封闭式隔离</h3>
 
-	<p>Let&#39;s see what happens if we <em>crush</em> the curve with a 5-month lockdown, reduce <icon i></icon> to nearly nothing, then finally – <em>finally</em> – return to normal life:</p>
+	<p>如果先来一次 5 个月的封闭式隔离，以 <em>“碾压”</em> 曲线，将 <icon i></icon> 的数量降低至接近于零，<em>最后</em> 完全恢复到疫情之前的生活：</p>
 
 	<div class="sim">
 	        <iframe src="sim?stage=int-3&format=lines" width="800" height="540"></iframe>
 	</div>
 
-	<p>Oh.</p>
+	<p>天哪。</p>
 
-	<p>This is the &quot;second wave&quot; everyone&#39;s talking about. As soon as we remove the lockdown, we get R &gt; 1 again. So, a single leftover <icon i></icon> (or imported <span class="nowrap"><icon i></icon>)</span> can cause a spike in cases that&#39;s almost as bad as if we&#39;d done Scenario 0: Absolutely Nothing.</p>
+	<p>这就是人人关注的“第二波疫情”。解封之后， R 的值再次大于 1, 只要有一个漏网之 <icon i></icon> ，（或者是外来输入的 <icon i></icon> ）就可以使病例数出现一个尖峰。这和什么都不做一样糟糕。</p>
 
-	<p><strong>A lockdown isn&#39;t a cure, it&#39;s just a restart.</strong></p>
+	<p><strong>封闭式隔离不是解药，而是一次重启。</strong></p>
 
-	<p>So, what, do we just lockdown again &amp; again?</p>
+	<p>所以，再来一次封闭式隔离，会发生什么？</p>
 
-	<h3 id="toc_3">Scenario 3: Intermittent Lockdown</h3>
+	<h3 id="toc_3">情况 3: 间歇性的封闭式隔离</h3>
 
-	<p>This solution was first suggested by the March 16 Imperial College report, and later again by a Harvard paper.<sup id="fnref20"><a href="#fn20" rel="footnote">20</a></sup></p>
+	<p>这种方案首次由帝国理工学院在 2020 年 3 月 16 日的报告中提出，随后一篇哈佛大学的论文中再次提出这个方案。<sup id="fnref20"><a href="#fn20" rel="footnote">20</a></sup></p>
 
-	<p><strong>Here&#39;s a simulation:</strong> (After playing the &quot;recorded scenario&quot;, you can try simulating your <em>own</em> lockdown schedule, by changing the sliders <em>while</em> the simulation is running! Remember you can pause &amp; continue the sim, and change the simulation speed)</p>
+	<p><strong>下面是这种情况的模拟：</strong> （在“预设场景”模拟完成之后，你可以模拟 <em>你的</em> 封锁计划。你可以在进行模拟的 <em>同时</em> 拖动滑动条，来调整各项参数！你可以随时暂停模拟、继续模拟、调整模拟速度）</p>
 
 	<div class="sim">
 	        <iframe src="sim?stage=int-4&format=lines" width="800" height="540"></iframe>
 	</div>
 
-	<p>This <em>would</em> keep cases below ICU capacity! And it&#39;s <em>much</em> better than an 18-month lockdown until a vaccine is available. We just need to... shut down for a few months, open up for a few months, and repeat until a vaccine is available. (And if there&#39;s no vaccine, repeat until herd immunity is reached... in 2022.)</p>
+	<p>这 <em>也许</em> 能让现有病例数始终低于 ICU 的容量！同时这比在疫苗问世之前进行一次 18 个月的“全境封锁” <em>好多了</em>。只需要……在几个月的封锁和几个月的开放之间反复横跳。（如果没有疫苗的话，不断反复横跳，直到在 2022 年达成群体免疫。）</p>
 
-	<p>Look, it&#39;s nice to draw a line saying &quot;ICU capacity&quot;, but there&#39;s lots of important things we <em>can&#39;t</em> simulate here. Like:</p>
+	<p>画一条表示 ICU 的容量的线很简单，然而有很多重要的东西是 <em>c无法</em> 在这里模拟的，例如：</p>
 
-	<p><strong>Mental Health:</strong> Loneliness is one of the biggest risk factors for depression, anxiety, and suicide. And it&#39;s as associated with an early death as smoking 15 cigarettes a day.<sup id="fnref21"><a href="#fn21" rel="footnote">21</a></sup></p>
+	<p><strong>心理健康：</strong> 孤独是导致抑郁、焦虑和自杀的最大风险因素之一。孤独造成寿命缩短的程度，相当于每天抽 15 根烟。<sup id="fnref21"><a href="#fn21" rel="footnote">21</a></sup></p>
 
-	<p><strong>Financial Health:</strong> &quot;What about the economy&quot; sounds like you care more about dollars than lives, but &quot;the economy&quot; isn&#39;t just stocks: it&#39;s people&#39;s ability to provide food &amp; shelter for their loved ones, to invest in their kids&#39; futures, and enjoy arts, foods, videogames – the stuff that makes life worth living. And besides, poverty <em>itself</em> has horrible impacts on mental and physical health.</p>
+	<p><strong>资金压力：</strong> 比起生命，“经济学”只会关心钱，不过经济不只是钱：它更是人们为所爱之人提供食物和住所，为下一代的未来进行投资，享用艺术、食物和游戏等这些让人生更值得的东西。同时，贫穷 <em>本身</em> 会对身心健康造成负面影响。</p>
 
-	<p>Not saying we <em>shouldn&#39;t</em> lock down again! We&#39;ll look at &quot;circuit breaker&quot; lockdowns later. Still, it&#39;s not ideal.</p>
+	<p>这并不是说 <em>不应该</em> 进行封闭式隔离！我们将会针对“全境封锁”进行讨论。这仍然不是最理想的防疫计划。</p>
 
-	<p>But wait... haven&#39;t Taiwan and South Korea <em>already</em> contained COVID-19? For 4 whole months, <em>without</em> long-term lockdowns?</p>
+	<p>等等，（到原文发布时为止——译注）中国台湾地区和韩国不是 <em>已经</em> 控制住新冠疫情了吗？他们只用了整整 4 个月，<em>没有实施</em> 长期的封闭式隔离？</p>
 
-	<p>How?</p>
+	<p>他们是怎么做到的？</p>
 
-	<h3 id="toc_4">Scenario 4: Test, Trace, Isolate</h3>
+	<h3 id="toc_4">情况 4: 核酸检测、接触者追踪、进行隔离</h3>
 
-	<p><em>&quot;Sure, we *could&#39;ve* done what Taiwan &amp; South Korea did at the start, but it&#39;s too late now. We missed the start.&quot;</em></p>
+	<p><em>“当然，我们（指西方国家）也可以做到像中国台湾地区和韩国在疫情开始的时候一样，但这已经太晚了。我们已经错过了在疫情开始时压制疫情的机会。”</em></p>
 
-	<p>But that&#39;s exactly it! “A lockdown isn&#39;t a cure, it&#39;s just a restart”... <strong>and a fresh start is what we need.</strong></p>
+	<p>但是这就是关键！“封闭式隔离不是解药，而是一次重启。” <strong>我们（指西方国家）正需要一次重启。</strong></p>
 
-	<p>To understand how Taiwan &amp; South Korea contained COVID-19, we need to understand the exact timeline of a typical COVID-19 infection<sup id="fnref22"><a href="#fn22" rel="footnote">22</a></sup>:</p>
+	<p>要理解中国台湾地区和韩国是如何控制住新冠疫情的，需要理解感染新冠病毒之后会发生什么：<sup id="fnref22"><a href="#fn22" rel="footnote">22</a></sup>:</p>
 
 	<p><img src="pics/timeline1.png" alt=""></p>
 
@@ -409,7 +409,7 @@
 
 	<p><img src="pics/timeline3.png" alt=""></p>
 
-	<p>This is called <strong>contact tracing</strong>. It&#39;s an old idea, was used at an unprecedented scale to contain Ebola<sup id="fnref24"><a href="#fn24" rel="footnote">24</a></sup>, and now it&#39;s core part of how Taiwan &amp; South Korea are containing COVID-19!</p>
+	<p>这种方法叫<strong>接触者追踪</strong>。这是一个在遏制埃博拉病毒的过程中以史无前例的规模使用的老方法<sup id="fnref24"><a href="#fn24" rel="footnote">24</a></sup>, 如今这正是中国台湾地区和韩国控制住新冠疫情的方法！（译注：这种方法也在中国大陆广泛使用。）</p>
 
 	<p>(It also lets us use our limited tests more efficiently, to find pre-symptomatic <span class="nowrap"><icon i></icon>s</span> without needing to test almost everyone.)</p>
 
@@ -425,7 +425,7 @@
 
 	<p><img src="pics/dp3t.png" alt=""></p>
 
-	<p>(<a href="https://ncase.me/contact-tracing/">Here&#39;s the full comic</a>. Details about &quot;pranking&quot;/false positives/etc in footnote:<sup id="fnref25"><a href="#fn25" rel="footnote">25</a></sup>)</p>
+	<p>（<a href="https://github.com/DP-3T/documents/raw/master/public_engagement/cartoon/zh/combined_panels.pdf">点击查看完整版漫画</a>。关于“恶作剧”、假阳性等技术细节，在脚注中会详细说明，点击查看脚注：<sup id="fnref25"><a href="#fn25" rel="footnote">25</a></sup>)</p>
 
 	<p>Along with similar teams like TCN Protocol<sup id="fnref26"><a href="#fn26" rel="footnote">26</a></sup> and MIT PACT<sup id="fnref27"><a href="#fn27" rel="footnote">27</a></sup>, they&#39;ve inspired Apple &amp; Google to bake privacy-first contact tracing directly into Android/iOS.<sup id="fnref28"><a href="#fn28" rel="footnote">28</a></sup> (Don&#39;t trust Google/Apple? Good! The beauty of this system is it doesn&#39;t <em>need</em> trust!) Soon, your local public health agency may ask you to download an app. If it&#39;s privacy-first with publicly-available code, please do!</p>
 
@@ -472,7 +472,7 @@
 
 	<p>The pessimist invents the parachute.</p>
 
-	<h3 id="toc_5">Scenario 4+: Masks For All, Summer, Circuit Breakers</h3>
+	<h3 id="toc_5">情况 4+: 所有人都戴口罩、夏天、“全境封锁”</h3>
 
 	<p>What if R<sub>0</sub> is way higher than we thought, and the above interventions, even with mild distancing, <em>still</em> aren&#39;t enough to get R &lt; 1?</p>
 
@@ -653,9 +653,9 @@
 	        <iframe src="sim?stage=SB&format=sb" width="800" height="540"></iframe>
 	</div>
 
-	<p>This basic &quot;epidemic flight simulator&quot; has taught us so much. It&#39;s let us answer questions about the past few months, next few months, and next few years.</p>
+	<p>这个“疫情模拟器”让我们受益匪浅，它告诉我们之前的几个月发生了什么，接下来的几个月和接下来的几年将会发生什么。</p>
 
-	<p>So finally, let&#39;s return to...</p>
+	<p>最后，让我们回到</p>
 
 	<div class="section chapter">
 	    <div>
@@ -664,25 +664,27 @@
 	    </div>
 	</div>
 
-	<p>Plane&#39;s sunk. We&#39;ve scrambled onto the life rafts. It&#39;s time to find dry land.<sup id="fnref45"><a href="#fn45" rel="footnote">45</a></sup></p>
+	<p>飞机已经在迫降中损毁，我们挤上了救生筏，该是找陆地的时候了。<sup id="fnref45"><a href="#fn45" rel="footnote">45</a></sup></p>
 
-	<p>Teams of epidemiologists and policymakers (<a href="https://www.americanprogress.org/issues/healthcare/news/2020/04/03/482613/national-state-plan-end-coronavirus-crisis/">left</a>, <a href="https://www.aei.org/research-products/report/national-coronavirus-response-a-road-map-to-reopening/">right</a>, and <a href="https://ethics.harvard.edu/covid-roadmap">multi-partisan</a>) have come to a consensus on how to beat COVID-19, while protecting our lives <em>and</em> liberties.</p>
+	<p>流行病学专家和政策制定者们（<a href="https://www.americanprogress.org/issues/healthcare/news/2020/04/03/482613/national-state-plan-end-coronavirus-crisis/">右派</a>, <a href="https://www.aei.org/research-products/report/national-coronavirus-response-a-road-map-to-reopening/">左派</a>，以及 <a href="https://ethics.harvard.edu/covid-roadmap">多党派人士</a>）针对如何在保护我们的生命 <em>和</em> 人身自由的同时，在抗击新冠疫情上已经达成共识。</p>
 
-	<p>Here&#39;s the rough idea, with some (less-consensus) backup plans:</p>
+	<p>这是一个简单粗暴的防疫政策，然而针对某些备用方案，尚未达成共识：</p>
 
 	<p><img src="pics/plan.png" alt=""></p>
 
-	<p>So what does this mean for YOU, right now?</p>
+	<p>如果是你的话，你需要怎么做？</p>
 
-	<p><strong>For everyone:</strong> Respect the lockdown so we can get out of Phase I asap. Keep washing those hands. Make your own masks. Download a <em>privacy-protecting</em> contact tracing app when those are available next month. Stay healthy, physically &amp; mentally! And write your local policymaker to get off their butt and...</p>
+	<p><strong>个人层面：</strong> 尊重封闭式隔离政策，尽快度过第 1 阶段，勤洗手，戴口罩。下个月别忘了下载 <em>能保护隐私的</em> 接触者追踪 APP. 保持身心健康，给当地政府提出建议：</p>
 
-	<p><strong>For policymakers:</strong> Make laws to support folks who have to self-isolate/quarantine. Hire more manual contact tracers, <em>supported</em> by privacy-protecting contact tracing apps. Direct more funds into the stuff we should be building, like...</p>
+	<p><strong>政策层面：</strong> 制定支持自我隔离者的政策，雇佣更多的流行病学调查员，为能保护隐私的接触者追踪 APP<em>提供支持。</em> 让更多的资金投入到疫情相关的后勤保障，比如：</p>
 
-	<p><strong>For builders:</strong> Build tests. Build ventilators. Build personal protective equipment for hospitals. Build tests. Build masks. Build apps. Build antivirals, prophylactics, and other treatments that aren&#39;t vaccines. Build vaccines. Build tests. Build tests. Build tests. Build hope. </p>
+	<p><strong>后勤层面：</strong> 提供更多的核酸检测、制造更多获得呼吸机、制造更多的医用防护用品、制造更多的口罩、开发先进的 APP, 制造更多的抗病毒药物、开发更多的预防措施和治疗方案、研发疫苗，进而创造希望。 </p>
 
-	<p>Don&#39;t downplay fear to build up hope. Our fear should <em>team up</em> with our hope, like the inventors of airplanes &amp; parachutes. Preparing for horrible futures is how we <em>create</em> a hopeful future.</p>
+	<p>不要通过低估危险性来创造希望。我们的恐惧要与希望<em>共存，</em>就像飞机和降落伞的发明者一样。我们为令人生畏的未来做好准备，同时也给未来 <em>创造</em> 希望。</p>
 
-	<p>The only thing to fear is the idea that the only thing to fear is fear itself.</p>
+	<p>我们唯一害怕的是这一句话：“唯一需要恐惧的是恐惧本身。”</p>
+	
+	<p>译者声明：除 DP-3T 有关漫画外，本文中所有的中文版漫画，使用的字体是<a href="https://github.com/adobe-fonts/source-han-sans">思源黑体</a>，遵循<a href="http://scripts.sil.org/OFL"> SIL 开源字体协议 1.1 版</a>授权使用。本文以及本文中图片的版权归属与原文一致。</p>
 
 	<div class="footnotes">
 	<hr>
@@ -789,7 +791,7 @@
 	</li>
 
 	<li id="fn19">
-	<p>This distortion would go away if we plotted R on a logarithmic scale... but then we&#39;d have to explain <em>logarithmic scales.</em>&nbsp;<a href="#fnref19" rev="footnote">&#8617;</a></p>
+	<p>如果我们用对数标度来展示 R 的值，这一失真将得以消除。然而我们还必须要解释什么是 <em>对数标度。</em>&nbsp;<a href="#fnref19" rev="footnote">&#8617;</a></p>
 	</li>
 
 	<li id="fn20">
